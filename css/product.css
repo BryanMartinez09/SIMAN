@@ -1,0 +1,284 @@
+
+/* --- PRODUCTOS --- */
+.productos {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.productos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.productos-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.ver-todo {
+  font-size: 0.95rem;
+  color: #b3003c;
+  text-decoration: underline;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap; /* ¡Este es clave! */
+  gap: 20px;
+  justify-content: center;
+}
+
+
+/* Tarjeta de producto */
+.producto {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.producto h4 {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.nombre {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 4px 0;
+  color: #222;
+}
+
+.precio-anterior {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #999;
+  margin: 0;
+}
+
+.precio-descuento {
+  font-size: 1.1rem;
+  color: #b3003c;
+  font-weight: bold;
+}
+
+.descuento {
+  background: #b3003c;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+.producto button {
+  background: #b3003c;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.3s ease;
+}
+
+.producto button:hover {
+  background: #8a002e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .productos-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .producto {
+    width: 45%;
+  }
+
+  .productos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .producto {
+    width: 100%;
+  }
+}
+main {
+  min-height: 60vh;
+}
+.vendido {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 4px 0;
+}
+
+.precio-desc {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.porcentaje-descuento {
+  background: #c00;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.cuotas {
+  background: #eee;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #444;
+  margin: 6px 0;
+}
+
+.colores {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+
+.catalogo-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.filtros {
+  width: 250px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
+
+.filtros h3, .filtros h4 {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filtro-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filtro-group.scrollable {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.productos {
+  flex: 1;
+}
+
+.ordenar-vista {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ordenar-vista select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.vista-iconos i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+.vista-iconos i.active {
+  color: #b3003c;
+}
+
+@media (max-width: 1024px) {
+  .catalogo-container {
+    flex-direction: column;
+  }
+
+  .filtros {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .filtros h3, .filtros h4 {
+    width: 100%;
+  }
+
+  .productos-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ordenar-vista {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.productos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* 👈 evita que se desalineen verticalmente */
+  gap: 20px;              /* 👈 espacio entre título y enlace */
+  margin-bottom: 20px;
+}
+
+.ver-todo {
+  font-size: 0.95rem;
+  color: #b3003c;
+  text-decoration: underline;
+  margin-left: 10px; /* también puedes ajustar esto si quieres más espacio */
+}
