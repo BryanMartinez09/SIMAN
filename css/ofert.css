@@ -1,0 +1,45 @@
+
+/* --- ESTILOS EXCLUSIVOS PARA OFERTAS --- */
+
+body {
+  background-color: #fff8f8; /* fondo muy suave rosado */
+}
+
+.productos-header h2 {
+  color: #c70039; /* rojo oferta */
+  position: relative;
+}
+
+.productos-header h2::after {
+  content: "🔥";
+  position: absolute;
+  right: -30px;
+  top: 0;
+  font-size: 1.5rem;
+}
+
+.producto {
+  border: 2px dashed #c70039;
+  background-color: #fff0f3;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+}
+
+.precio-descuento,
+.porcentaje-descuento {
+  color: #b8002f;
+  font-weight: bold;
+}
+
+.cuotas {
+  background-color: #ffe0e0;
+  color: #b8002f;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 5px;
+}
